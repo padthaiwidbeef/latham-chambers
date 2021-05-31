@@ -7179,6 +7179,14 @@ button.bg-gray:focus {
   background-color: #fff !important;
 }
 
+.opacity {
+  opacity: 0.9
+}
+
+.no-opacity {
+  opacity: 1
+}
+
 .bg-transparent {
   background-color: transparent !important;
 }
@@ -37790,6 +37798,20 @@ a.pswp__share--download:hover {
   padding-top: .75rem;
   padding-bottom: .75rem;
 }
+
+.map-container{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  }
+  .map-container iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
 
 @media (min-width: 992px) {
   #cookie-consent .cc-banner {
