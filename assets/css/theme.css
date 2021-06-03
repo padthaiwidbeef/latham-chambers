@@ -37820,6 +37820,30 @@ a.pswp__share--download:hover {
   }
 }
 
+#areasOfPractice li {
+  border-radius: 10px;
+  border: 12px;
+  background: #BADA55;
+  padding: 7px;
+  margin-right: 8px;
+  
+}
+
+#areasOfPractice li:hover {
+  border-radius: 10px;
+  border: 12px;
+  border-color: #BADA55;
+  background: none;
+  padding: 7px;
+  margin-right: 8px;
+  
+}
+
+#areasOfPractice {
+  padding-left: 0px;
+  margin-bottom: 40px;
+}
+
 /**
  * Define you custome style here.
  * It will be merged with the default style.
