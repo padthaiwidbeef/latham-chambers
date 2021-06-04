@@ -37821,27 +37821,40 @@ a.pswp__share--download:hover {
 }
 
 #areasOfPractice li {
-  border-radius: 10px;
-  border: 12px;
-  background: #BADA55;
+  border-radius: 15px;
+  border: 2px solid #d6c800;
   padding: 7px;
+  background: none;
   margin-right: 8px;
+  float: left;
+  list-style: none;
+  margin-bottom: 10px;
+  line-height: 15px;
+  font-size: 15px;
   
 }
 
 #areasOfPractice li:hover {
-  border-radius: 10px;
+  border-radius: 15px;
   border: 12px;
-  border-color: #BADA55;
-  background: none;
+  border: 2px solid #e7d913;
+  background: #fff697;
   padding: 7px;
   margin-right: 8px;
+  transition: 0.3s;
   
+}
+
+.gold {
+  background: #fff697 !important;
 }
 
 #areasOfPractice {
   padding-left: 0px;
   margin-bottom: 40px;
+  cursor:default;
+  
+  
 }
 
 /**

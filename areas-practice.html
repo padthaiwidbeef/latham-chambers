@@ -11,21 +11,49 @@
         <meta name="keywords" content="bootstrap, theme, template, multipurpose, landing, html5, css3, javascript, event, case study, photography, about, team, portfolio, services, contact, pricing, faqs, careers, blog, sign in, sign up, coming soon, legal">
         <meta name="author" content="Webinning Ltd.">
 
+        <script src="./jquery-3.6.0.min.js"></script>
+
         <!-- Page title-->
         <title>Careers | Square - Premium Bootstrap Theme</title>
 
-<!-- Favicon and Touch Icons-->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/favicons/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicons/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicons/favicon-16x16.png">
-<link rel="manifest" href="assets/images/icons/favicons/site.webmanifest">
-<link rel="mask-icon" href="assets/images/icons/favicons/safari-pinned-tab.svg" color="#232323">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="theme-color" content="#ffffff">
+        <!-- Favicon and Touch Icons-->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/favicons/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicons/favicon-16x16.png">
+        <link rel="manifest" href="assets/images/icons/favicons/site.webmanifest">
+        <link rel="mask-icon" href="assets/images/icons/favicons/safari-pinned-tab.svg" color="#232323">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
         <!-- Theme Stylesheets -->
             <link href="assets/css/theme.css" rel="stylesheet">
 
     </head> 
+
+
+    <script>
+        $(document).ready(function(){
+
+            var sortList = []
+
+            $("li").click(function() {
+                console.log(event.target.innerText);
+                $(this).toggleClass("gold");
+                if(sortList.includes(event.target.innerText)){
+                   sortList.splice(sortList.indexOf(event.target.innerText), 1)
+                }
+                else{
+                    sortList.push(event.target.innerText)
+                }
+                console.log(sortList)
+            });
+
+            $("#reset").click(function() {
+                sortList = []
+                $("li").removeClass("gold")
+            })
+        
+        });
+    </script>
     
     <body>
 
@@ -88,20 +116,43 @@
     <section class="mt-10 pt-6 pb-4 pt-lg7 pb-lg-5 bg-layer-light-top-80-left-50">
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div style="margin-bottom: 30px; margin-top: -50px" class="col">
                     <h1 class="display-4">Sort by Practicing Area</h1>
                     <ul id="areasOfPractice">
-                        <li style="display:inline">Coffee</li>
-                        <li style="display:inline">Coffee</li>
-                        <li style="display:inline">Coffee</li>
-                        <li style="display:inline">Coffee</li>
-                        <li style="display:inline">Coffee</li>
-                        <li style="display:inline">Coffee</li>
-                        <li style="display:inline">Coffee</li>
-                        <li style="display:inline">Coffee</li>
-                        <li style="display:inline">Coffee</li>
+                        <li id="Administrative" style="display:inline">Administrative</li>
+                        <li id="Building and Construction" style="display:inline">Building and Construction</li>
+                        <li id="Commercial" style="display:inline">Commercial</li>
+                        <li id="Conflict of Laws" style="display:inline">Conflict of Laws</li>
+                        <li id="Constitutional" style="display:inline">Constitutional</li>
+                        <li id="Contract" style="display:inline">Contract</li>
+                        <li id="Corporations" style="display:inline">Corporations</li>
+                        <li id="Coporations & Insolvency" style="display:inline">Coporations & Insolvency</li>
+                        <li id="Criminal Law" style="display:inline">Criminal Law</li>
+                        <li id="Discriminative Law" style="display:inline">Discriminative Law</li>
+                        <li id="Employment" style="display:inline">Employment</li>
+                        <li id="Employment & Industrial" style="display:inline">Employment & Industrial</li>
+                        <li id="Equity" style="display:inline">Equity</li>
+                        <li id="Family Law" style="display:inline">Family Law</li>
+                        <li id="Family Provision Act" style="display:inline">Family Provision Act</li>
+                        <li id="Industrial Relations" style="display:inline">Industrial Relations</li>
+                        <li id="Insolvency" style="display:inline">Insolvency</li>
+                        <li id="Migration and Citizenship" style="display:inline">Migration and Citizenship</li>
+                        <li id="Mortgages & Fraud" style="display:inline">Mortgages & Fraud</li>
+                        <li id="Personal Injury" style="display:inline">Personal Injury</li>
+                        <li id="Probate" style="display:inline">Probate</li>
+                        <li id="Professional Negligence" style="display:inline">Professional Negligence</li>
+                        <li id="Property" style="display:inline">Property</li>
+                        <li id="Public Interest Immunity/Privelage" style="display:inline">Public Interest Immunity/Privelage</li>
+                        <li id="Restraint of Trade" style="display:inline">Restraint of Trade</li>
+                        <li id="Taxation" style="display:inline">Taxation</li>
+                        <li id="Trade Practices" style="display:inline">Trade Practices</li>
+                        <li id="Trusts" style="display:inline">Trusts</li>
+                        <li id="Wills and Probate" style="display:inline">Wills and Probate</li>
                     </ul>
                 </div>
+            </div>
+            <div>
+                <button id="reset" type="button">Click Me!</button>
             </div>
             <div class="row mx-n3 grid" data-isotope='{"layoutMode": "masonry", "itemSelector": ".grid-item"}' id="portfolio">
                 <div class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-right">
@@ -126,7 +177,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-left">
+                <div id="donnely" class="col-md-6 col-lg-4 px-3 mb-5" data-aos="fade-left">
                     <a href="./barristerPages/donnely.html" class="card shadow lift rounded text-body">
                         <picture>
                             <img src="assets/images/photos/photo-108.jpg" alt="photo-11" class="img-fluid w-100 card-img-top rounded-top">
