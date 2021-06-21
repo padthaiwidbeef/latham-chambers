@@ -13,10 +13,8 @@
         content="bootstrap, theme, template, multipurpose, landing, html5, css3, javascript, event, case study, photography, about, team, portfolio, services, contact, pricing, faqs, careers, blog, sign in, sign up, coming soon, legal">
     <meta name="author" content="Webinning Ltd.">
 
-    <script src="./jquery-3.6.0.min.js"></script>
-
     <!-- Page title-->
-    <title>Areas of Practice | Latham Chambers</title>
+    <title>Clerk | Latham Chambers</title>
 
     <!-- Favicon and Touch Icons-->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/favicons/apple-touch-icon.png">
@@ -24,7 +22,6 @@
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicons/favicon-16x16.png">
     <link rel="manifest" href="assets/images/icons/favicons/site.webmanifest">
     <link rel="mask-icon" href="assets/images/icons/favicons/safari-pinned-tab.svg" color="#232323">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" type="image/jpg" href="assets/images/icons/favicons/android-chrome-512x512.png" />
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
@@ -32,45 +29,6 @@
     <link href="assets/css/theme.css" rel="stylesheet">
 
 </head>
-
-
-<script>
-    $(document).ready(function () {
-
-        var sortList = []
-        var sortListString = ""
-
-
-        $(".aop").click(function () {
-            $(this).toggleClass("gold");
-            if (sortList.includes(event.target.id)) {
-                sortList.splice(sortList.indexOf(event.target.id), 1)
-            }
-            else {
-                sortList.push(event.target.id)
-            }
-            sortListString = sortList.join()
-            console.log(sortListString)
-            console.log(sortList)
-            if (sortList.length > 0) {
-                $(".li1").fadeOut()
-                $(sortListString).fadeIn()
-            }
-            else {
-                $(".li1").fadeIn()
-            }
-        });
-
-
-        $("#reset").click(function () {
-            sortList = []
-            sortListString = ""
-            $(".aop").removeClass("gold")
-            $(".li1").fadeIn()
-        })
-
-    });
-</script>
 
 <body>
 
@@ -87,6 +45,7 @@
             <!-- Brand -->
             <a class="navbar-brand mr-auto" href="./index.html" aria-label="Click to go back to Homepage">
                 <img style="margin-top: -5px" height="80" src="./assets/images/icons/favicons/LOGO BLACK.png">
+                <!-- <svg width="160" height="50" class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 701 217"><path d="M122.73 185.24l12.57-15.05c8.77 7.2 18.58 11.4 29.58 11.4 8.37 0 12.7-3.4 12.7-8.25 0-5.36-4.2-6.54-17.28-9.68-19.23-4.32-33.5-9.56-33.5-27.62 0-17.27 13.87-28.8 34.42-28.8 15 0 26.83 4.32 36.38 12.3l-11.38 16c-8.2-6.3-17.28-9.54-25.65-9.54-7.2 0-11.26 3.4-11.26 7.85 0 5.5 4.32 7.33 17.67 10.2 20.15 4.32 33.1 10.07 33.1 27 0 18.06-13.74 29.3-36 29.3-15.96-.08-30.48-5.3-41.35-15.13zm190.7-6.02l8 6.94-10.87 12.56-8.77-7.6a49.08 49.08 0 0 1-28.53 9.16c-26.18 0-48.25-21.3-48.25-46.6s22.12-46.46 48.3-46.46 48.43 21.2 48.43 46.46a44 44 0 0 1-8.3 25.52zm-28.14-2.48l-9.28-8.12 10.86-12.56 9.56 8.24a26 26 0 0 0 2.22-10.6c0-14.13-11.64-26.17-25.4-26.17s-25.4 12-25.4 26.17 11.66 26.3 25.4 26.3a23.74 23.74 0 0 0 12.04-3.26zm51.57-17.4V108.8h22.38v49.47c0 12.7 8.12 21.73 19.37 21.73s19.5-9 19.5-21.73V108.8h22.25v50.52c0 24.08-17.14 41-41.75 41s-41.75-16.92-41.75-41zm158.23 26.3h-35.6l-5.24 13.1H429.1l35.6-89.9h25.13l35.6 89.9H500.3zm-6.93-17.53l-10.87-27.62-10.86 27.62zm102.35 30.62l-19.77-28.14h-11v28.14h-22.37v-89.9h41.75c19.76 0 34.16 12.7 34.16 30.9 0 13.1-7.46 23.42-19.1 28.14l21.73 30.88zm-30.76-48.55H577c7.72 0 13.2-4.2 13.2-10.47s-5.5-10.47-13.2-10.47h-17.26zm92.66-21.34v14h44v20h-44v15.87h48.43v20H630v-89.9h70.8v20z" fill='#FFFFFF'/><path d="M3.33 3.3h210.03v210.03H3.33z" fill="none" stroke='#FFFFFF' stroke-miterlimit="10" stroke-width="6"/></svg> -->
             </a>
 
             <!-- Toggler -->
@@ -105,20 +64,21 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./barristers.html">
+                        <a class="nav-link active" href="./barristers.html">
                             Barristers
                         </a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link active " href="./areas-practice.html">
+                    <li class="nav-item">
+                        <a class="nav-link " href="./areas-practice.html">
                             Areas Of Practice
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a class="nav-link " href="./clerk.html">
                             Clerk
                         </a>
                     </li>
+
                 </ul>
 
                 <!-- CONTACT BUTTON -->
@@ -136,185 +96,79 @@
 
     <!-- Main content -->
     <main>
-        <section class="mt-10 pt-6 pb-4 pt-lg7 pb-lg-5 bg-layer-light-top-80-left-50">
-            <div class="container">
-                <div class="row">
-                    <div style="margin-bottom: 30px; margin-top: -50px" class="col">
-                        <h1 class="display-4">Sort by Practicing Area</h1>
-                        <ul id="areasOfPractice">
-                            <li id=".administrative" class="aop">Administrative</li>
-                            <li id=".australianConsumerLaw" class="aop">Australian Consumer Law</li>
-                            <li id=".commercial" class="aop">Commercial</li>
-                            <li id=".commonLaw" class="aop">Common Law</li>
-                            <li id=".criminalLaw" class="aop">Criminal Law</li>
-                            <li id=".debtRecovery" class="aop">Debt Recovery</li>
-                            <li id=".discriminationLaw" class="aop">Discrimination Law</li>
-                            <li id=".employment" class="aop">Employment</li>
-                            <li id=".equity" class="aop">Equity</li>
-                            <li id=".familyProvisionAct" class="aop">Family Provision Act</li>
-                            <li id=".industrialRelations" class="aop">Industrial Relations</li>
-                            <li id=".insolvency" class="aop">Insolvency</li>
-                            <li id=".personalInjury" class="aop">Personal Injury</li>
-                            <li id=".probate" class="aop">Probate</li>
-                            <li id=".professionalNegligence" class="aop">Professional Negligence</li>
-                            <li id=".publicInterestImmunity" class="aop">Public Interest Immunity/Privelage</li>
-                            <li id=".tradePractices" class="aop">Trade Practices</li>
-                            <li id=".willsAndProbate" class="aop">Wills and Probate</li>
-                            <li id="reset"
-                                style="font-weight: bold; border: 2px solid #d6c800 ; background-color: #fff697 ">Reset
-                                <i class="fa fa-undo"></i></li>
-                        </ul>
+        <section style="margin-top: 110px" class="py-6 mb-6 py-lg-7 mb-lg-7">
+            <div class="container-fluid px-lg-0">
+                <div class="flex">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="py-12 py-lg-15">
+                            <div class="bg-image bg-cover mr-lg-5"
+                                style="background-image: url(assets/images/photos/fiona.jpeg);"></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <h3 class="h2">Clerk: &nbsp &nbsp<span style="font-family:Brush Script MT">Fiona Foote</span>
+                        </h3>
+                        <p>Fiona Foote is the Clerk of Latham Chambers. She brings with her over 10 years of
+                            administrative experience. <br> Judy is responsible for the general management of the floor.
+                            She has a detailed knowledge of her barristers and can assist with suitability, expertise
+                            and
+                            experience of counsel, availability and fees.</p>
+                        <div class="d-flex" data-aos="fade-left">
+                            <div class="d-flex align-items-start mt-1">
+                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
+                                    <title>check</title>
+                                    <path
+                                        d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z" />
+                                </svg>
+                            </div>
+                            <div class="ml-2">
+                                <p class="font-size-5 mb-3">Telephone: </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex" data-aos="fade-left" data-aos-delay="100">
+                            <div class="d-flex align-items-start mt-1">
+                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
+                                    <title>check</title>
+                                    <path
+                                        d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z" />
+                                </svg>
+                            </div>
+                            <div class="ml-2">
+                                <p class="font-size-5 mb-3">Email: </p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex" data-aos="fade-left" data-aos-delay="200">
+                            <div class="d-flex align-items-start mt-1">
+                                <svg class="fill-secondary" width="16" height="16" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 24 24">
+                                    <title>check</title>
+                                    <path
+                                        d="M23.146,5.4,20.354,2.6a.5.5,0,0,0-.708,0L7.854,14.4a.5.5,0,0,1-.708,0L4.354,11.6a.5.5,0,0,0-.708,0L.854,14.4a.5.5,0,0,0,0,.707L7.146,21.4a.5.5,0,0,0,.708,0L23.146,6.1A.5.5,0,0,0,23.146,5.4Z" />
+                                </svg>
+                            </div>
+                            <div class="ml-2">
+                                <p class="font-size-5 mb-3">Fax: </p>
+                            </div>
+                        </div>
+
+
+                        <a href="contact.html"
+                            class="btn btn-primary text-uppercase d-inline-flex align-items-center mt-5">Get in
+                            Touch<svg width="16" height="16" class="ml-2" xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24">
+                                <title>arrow-right-1</title>
+                                <path
+                                    d="M19.5,12a2.3,2.3,0,0,1-.78,1.729L7.568,23.54a1.847,1.847,0,0,1-2.439-2.773l9.752-8.579a.25.25,0,0,0,0-.376L5.129,3.233A1.847,1.847,0,0,1,7.568.46l11.148,9.808A2.31,2.31,0,0,1,19.5,12Z">
+                                </path>
+                            </svg></a>
                     </div>
                 </div>
-
-                <section>
-                    <ul class="ul1">
-                        <li id="bearman" class="li1 equity">
-                            <div class="px-3 mb-5" data-aos="fade-right">
-                                <a href="./barristerPages/bearman.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-109.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Michael Bearman</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="donnely"
-                            class="li1 willsAndProbate criminalLaw administrative commercial discriminationLaw">
-                            <div class="px-3 mb-5" data-aos="fade-left">
-                                <a href="./barristerPages/donnely.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-108.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Dr. Jason Donnelly</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="rollinson" class="li1 equity personalInjury">
-                            <div class="px-3 mb-5" data-aos="fade-right">
-                                <a href="./barristerPages/rollinson.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-99.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Michael Rollinson</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="paterson"
-                            class="li1 commercial equity professionalNegligence willsAndProbate insolvency">
-                            <div class="px-3 mb-5" data-aos="fade-left">
-                                <a href="./barristerPages/paterson.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-101.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Andrew Paterson</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="white" class="li1 equity criminalLaw familyProvisionAct">
-                            <div class="px-3 mb-5" data-aos="fade-left">
-                                <a href="./barristerPages/white.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-100.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Patrcia White</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="flaherty" class="li1 commercial equity probate">
-                            <div class="px-3 mb-5" data-aos="fade-right">
-                                <a href="./barristerPages/flaherty.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-102.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Dennis Flaherty</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="grady" class="li1 criminalLaw publicInterestImmunity">
-                            <div class="px-3 mb-5" data-aos="fade-up">
-                                <a href="./barristerPages/grady.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-107.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Richard Grady</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="tam" class="li1 discriminationLaw">
-                            <div class="px-3 mb-5" data-aos="fade-down">
-                                <a href="./barristerPages/tam.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-111.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Ivan Tam</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="donaghey" class="li1 employment insolvency industrialRelations">
-                            <div class="px-3 mb-5 img1" data-aos="fade-down">
-                                <a href="./barristerPages/donaghey.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-110.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>Tim Donaghey</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                        <li id="aquilina"
-                            class="li1 commercial debtRecovery personalInjury commonLaw professionalNegligence tradePractices australianConsumerLaw">
-                            <div class="px-3 mb-5" data-aos="fade-left">
-                                <a href="./barristerPages/aquilina.html" class="card shadow lift rounded text-body">
-                                    <picture>
-                                        <img src="assets/images/photos/photo-110.jpg" alt="photo-11"
-                                            class="img-fluid w-100 card-img-top rounded-top img1">
-                                    </picture>
-                                    <div class="card-body py-4">
-                                        <p class="card-text"><strong>David Aquilina</strong><br /><span
-                                                class="small text-muted">Photographing</span></p>
-                                    </div>
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </section>
-
+            </div>
+        </section>
         </section>
 
 
