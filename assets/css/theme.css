@@ -37882,6 +37882,20 @@ a.pswp__share--download:hover {
   flex-wrap: wrap;
 }
 
+.fixedBottom {
+  position: static;
+  bottom: 0;
+  width: 100%;
+}
+
+.footerOverlap {
+  margin-bottom: 200px;
+}
+
+.clerkContent {
+  min-height: 65vh;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column1 {
